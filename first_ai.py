@@ -8,5 +8,10 @@ import numpy as np
 print(x_train.shape)
 print(x_test.shape)
 
-x_train /= 255.0
-y_train /= 255.0
+x_train = x_train / 255.0
+x_test = x_test / 255.0
+
+x_train = x_train.reshape(-1, 28*28)
+x_test = x_test.reshape(-1, 28*28)
+
+print(x_train.shape)
