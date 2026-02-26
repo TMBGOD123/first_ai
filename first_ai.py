@@ -7,3 +7,6 @@ import numpy as np
 
 print(x_train.shape)
 print(x_test.shape)
+
+x_train /= 255.0
+y_train /= 255.0
