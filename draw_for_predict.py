@@ -118,7 +118,6 @@ class DigitRecognizerApp:
             self.master.after(0, self.show_error, str(e))
 
     def update_result(self, digit, confidence, probs_text):
-        """Обновляем результат в интерфейсе"""
         self.result_label.config(
             text=f"Это цифра: {digit} (уверенность: {confidence:.1f}%)",
             fg='green' if confidence > 80 else 'orange'
@@ -126,7 +125,6 @@ class DigitRecognizerApp:
         self.prob_label.config(text=probs_text)
 
     def show_error(self, error):
-        """Показываем ошибку"""
         self.result_label.config(text=f"Ошибка: {error}", fg='red')
 
 
