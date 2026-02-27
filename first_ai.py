@@ -15,3 +15,10 @@ x_train = x_train.reshape(-1, 28*28)
 x_test = x_test.reshape(-1, 28*28)
 
 print(x_train.shape)
+
+model = models.Sequental([
+    layers.Dense(128, activation='relu', input_shape=(784,)),
+    layers.Dense(10, activation='softmax')
+])
+
+model.summary()
