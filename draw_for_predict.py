@@ -94,7 +94,6 @@ class DigitRecognizerApp:
         threading.Thread(target=self._predict, daemon=True).start()
 
     def _predict(self):
-        """Внутренняя функция для предсказания"""
         try:
             # Подготавливаем изображение
             img_array = self.preprocess_image()
